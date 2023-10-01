@@ -4,17 +4,13 @@
 
 ## Overview
 
-Beelzebub is an advanced honeypot framework designed to provide a highly secure environment for detecting and analyzing cyber attacks. It offers a low code approach for easy implementation and utilizes virtualization techniques powered by GPT-3, the OpenAI language model.
+Beelzebub is an advanced honeypot framework designed to provide a highly secure environment for detecting and analyzing cyber attacks. It offers a low code approach for easy implementation and utilizes virtualization techniques powered by OpenAI Generative Pre-trained Transformer.
 
-![Beelzebub Logo](https://i.postimg.cc/KvbsJFp3/logo-1.png)
+<img src="https://beelzebub.netlify.app/go-beelzebub.png" alt="Beelzebub Logo" width="200"/>
 
 ## OpenAI GPT Integration
 
 Learn how to integrate Beelzebub with OpenAI GPT-3 by referring to our comprehensive guide on Medium: [Medium Article](https://medium.com/@mario.candela.personal/how-to-build-a-highly-effective-honeypot-with-beelzebub-and-chatgpt-a2f0f05b3e1)
-
-For a visual representation of the integration, you can explore the following diagram:
-
-[![OpenAI Integration Diagram](https://static.swimlanes.io/24d6634a381aa8eb0decf5bac7ae214d.png)](https://static.swimlanes.io/24d6634a381aa8eb0decf5bac7ae214d.png)
 
 ## Telegram Bot for Real-Time Attacks
 
@@ -62,6 +58,21 @@ We provide two quick start options for build and run Beelzebub: using Docker Com
    $ ./beelzebub
    ```
 
+### Deploy on kubernetes cluster using helm
+
+1. Install helm
+
+2. Deploy beelzebub:
+
+   ```bash
+   $ helm install beelzebub ./beelzebub-chart
+   ```
+
+3. Next release
+
+   ```bash
+   $ helm upgrade beelzebub ./beelzebub-chart
+   ```
 ## Testing
 
 We provide two types of tests: unit tests and integration tests.
@@ -86,13 +97,14 @@ $ make test.integration
 
 Beelzebub offers a wide range of features to enhance your honeypot environment:
 
-- OpenAPI ChatBot GPT-3 Linux virtualization
+- OpenAI Generative Pre-trained Transformer act as Linux virtualization
 - SSH Honeypot
 - HTTP Honeypot
 - TCP Honeypot
 - Prometheus openmetrics integration
 - Docker integration
 - RabbitMQ integration
+- kubernetes
 
 ## Example Configuration
 
@@ -243,7 +255,7 @@ passwordRegex: "^(root|qwerty|Smoker666)$"
 deadlineTimeoutSeconds: 60
 ```
 
-![Screenshot](https://i.postimg.cc/jdpfT0LB/Schermata-2022-06-02-alle-12-46-50.png)
+[![asciicast](https://asciinema.org/a/604522.svg)](https://asciinema.org/a/604522)
 
 ## Roadmap
 
@@ -257,6 +269,7 @@ Happy hacking!
 
 ## License
 
-Beelzebub is licensed under the [GNU GPL 3 License](LICENSE).
+Beelzebub is licensed under the [MIT License](LICENSE).
 
-[![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/donate/?business=P75FH5LXKQTAC&no_recurring=0&currency_code=EUR)
+## Supported by JetBrains
+[![JetBrains Black Box Logo logo](https://resources.jetbrains.com/storage/products/company/brand/logos/jb_square.png)](https://jb.gg/OpenSourceSupport)
